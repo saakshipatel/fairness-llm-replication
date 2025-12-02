@@ -1,0 +1,32 @@
+
+PHASE 1: BIAS DETECTION IN CHATGPT - SUMMARY REPORT
+================================================================================
+
+Model: gpt-3.5-turbo
+Date: 2025-11-30 12:37:57
+Profiles Tested: 45
+
+FAIRNESS METRICS (0-1 scale, higher is better):
+--------------------------------------------------------------------------------
+Demographic Parity (Gender):  0.6772
+Demographic Parity (Age):     0.6472
+Individual Fairness:          0.4669
+Equal Opportunity:            1.0000
+
+Average Fairness:             0.6978
+
+STATUS: SIGNIFICANT BIAS
+
+INTERPRETATION:
+--------------------------------------------------------------------------------
+Gender bias detected - different recommendations for different genders
+Individual fairness issues - similar users get different recommendations
+Good equal opportunity
+
+NEXT STEPS:
+--------------------------------------------------------------------------------
+1. Run Phase 2 to compare with other models
+2. Run Phase 3 to test bias mitigation
+3. Analyze visualizations in results/visualizations/
+
+================================================================================

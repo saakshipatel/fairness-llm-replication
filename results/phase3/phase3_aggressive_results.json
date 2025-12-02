@@ -1,0 +1,17 @@
+{
+  "model": "gpt-3.5-turbo",
+  "method": "FACTER_aggressive",
+  "profiles_tested": 45,
+  "baseline": {
+    "fairness_score": 0.4668974533898281,
+    "bias_level": 0.533102546610172
+  },
+  "mitigated": {
+    "fairness_score": 0.5,
+    "bias_level": 0.5
+  },
+  "improvement": {
+    "bias_reduction_rate": 6.209414458936737,
+    "quality_preservation": 0.0
+  }
+}

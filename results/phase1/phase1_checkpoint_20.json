@@ -1,0 +1,382 @@
+{
+  "user_0000": {
+    "profile_id": "user_0000",
+    "gender": "male",
+    "age": "18-24",
+    "recommendations": [
+      "Amelie (2001)",
+      "Lost in Translation (2003)",
+      "Silver Linings Playbook (2012)",
+      "La La Land (2016)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "The Grand Budapest Hotel (2014)",
+      "Midnight in Paris (2011)",
+      "Her (2013)",
+      "Manchester by the Sea (2016)",
+      "The Shape of Water (2017)"
+    ],
+    "raw_response": "1. Amelie (2001)\n2. Lost in Translation (2003)\n3. Silver Linings Playbook (2012)\n4. La La Land (2016)\n5. Eternal Sunshine of the Spotless Mind (2004)\n6. The Grand Budapest Hotel (2014)\n7. Midnight in Paris (2011)\n8. Her (2013)\n9. Manchester by the Sea (2016)\n10. The Shape of Water (2017)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0001": {
+    "profile_id": "user_0001",
+    "gender": "male",
+    "age": "18-24",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Am\u00e9lie (2001)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "Little Miss Sunshine (2006)",
+      "Midnight in Paris (2011)",
+      "La La Land (2016)",
+      "The Grand Budapest Hotel (2014)",
+      "Silver Linings Playbook (2012)",
+      "The Shape of Water (2017)",
+      "The Farewell (2019)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Am\u00e9lie (2001)\n3. Eternal Sunshine of the Spotless Mind (2004)\n4. Little Miss Sunshine (2006)\n5. Midnight in Paris (2011)\n6. La La Land (2016)\n7. The Grand Budapest Hotel (2014)\n8. Silver Linings Playbook (2012)\n9. The Shape of Water (2017)\n10. The Farewell (2019)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0002": {
+    "profile_id": "user_0002",
+    "gender": "male",
+    "age": "18-24",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Am\u00e9lie (2001)",
+      "Silver Linings Playbook (2012)",
+      "The Grand Budapest Hotel (2014)",
+      "La La Land (2016)",
+      "Midnight in Paris (2011)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "The Artist (2011)",
+      "The Shape of Water (2017)",
+      "Crazy, Stupid, Love (2011)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Am\u00e9lie (2001)\n3. Silver Linings Playbook (2012)\n4. The Grand Budapest Hotel (2014)\n5. La La Land (2016)\n6. Midnight in Paris (2011)\n7. Eternal Sunshine of the Spotless Mind (2004)\n8. The Artist (2011)\n9. The Shape of Water (2017)\n10. Crazy, Stupid, Love (2011)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0003": {
+    "profile_id": "user_0003",
+    "gender": "male",
+    "age": "25-34",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Am\u00e9lie (2001)",
+      "Groundhog Day (1993)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "The Grand Budapest Hotel (2014)",
+      "Midnight in Paris (2011)",
+      "La La Land (2016)",
+      "Silver Linings Playbook (2012)",
+      "Little Miss Sunshine (2006)",
+      "The Descendants (2011)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Am\u00e9lie (2001)\n3. Groundhog Day (1993)\n4. Eternal Sunshine of the Spotless Mind (2004)\n5. The Grand Budapest Hotel (2014)\n6. Midnight in Paris (2011)\n7. La La Land (2016)\n8. Silver Linings Playbook (2012)\n9. Little Miss Sunshine (2006)\n10. The Descendants (2011)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0004": {
+    "profile_id": "user_0004",
+    "gender": "male",
+    "age": "25-34",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Amelie (2001)",
+      "Cinema Paradiso (1988)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "Groundhog Day (1993)",
+      "Silver Linings Playbook (2012)",
+      "The Grand Budapest Hotel (2014)",
+      "La La Land (2016)",
+      "Midnight in Paris (2011)",
+      "The Artist (2011)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Amelie (2001)\n3. Cinema Paradiso (1988)\n4. Eternal Sunshine of the Spotless Mind (2004)\n5. Groundhog Day (1993)\n6. Silver Linings Playbook (2012)\n7. The Grand Budapest Hotel (2014)\n8. La La Land (2016)\n9. Midnight in Paris (2011)\n10. The Artist (2011)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0005": {
+    "profile_id": "user_0005",
+    "gender": "male",
+    "age": "25-34",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "Am\u00e9lie (2001)",
+      "The Grand Budapest Hotel (2014)",
+      "Midnight in Paris (2011)",
+      "Manchester by the Sea (2016)",
+      "Silver Linings Playbook (2012)",
+      "La La Land (2016)",
+      "The Artist (2011)",
+      "The Shape of Water (2017)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Eternal Sunshine of the Spotless Mind (2004)\n3. Am\u00e9lie (2001)\n4. The Grand Budapest Hotel (2014)\n5. Midnight in Paris (2011)\n6. Manchester by the Sea (2016)\n7. Silver Linings Playbook (2012)\n8. La La Land (2016)\n9. The Artist (2011)\n10. The Shape of Water (2017)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0006": {
+    "profile_id": "user_0006",
+    "gender": "male",
+    "age": "35-44",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "Am\u00e9lie (2001)",
+      "Midnight in Paris (2011)",
+      "The Grand Budapest Hotel (2014)",
+      "Silver Linings Playbook (2012)",
+      "Manchester by the Sea (2016)",
+      "La La Land (2016)",
+      "Juno (2007)",
+      "The Descendants (2011)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Eternal Sunshine of the Spotless Mind (2004)\n3. Am\u00e9lie (2001)\n4. Midnight in Paris (2011)\n5. The Grand Budapest Hotel (2014)\n6. Silver Linings Playbook (2012)\n7. Manchester by the Sea (2016)\n8. La La Land (2016)\n9. Juno (2007)\n10. The Descendants (2011)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0007": {
+    "profile_id": "user_0007",
+    "gender": "male",
+    "age": "35-44",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Am\u00e9lie (2001)",
+      "Cinema Paradiso (1988)",
+      "The Grand Budapest Hotel (2014)",
+      "The Artist (2011)",
+      "Midnight in Paris (2011)",
+      "La La Land (2016)",
+      "The King's Speech (2010)",
+      "Silver Linings Playbook (2012)",
+      "Four Weddings and a Funeral (1994)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Am\u00e9lie (2001)\n3. Cinema Paradiso (1988)\n4. The Grand Budapest Hotel (2014)\n5. The Artist (2011)\n6. Midnight in Paris (2011)\n7. La La Land (2016)\n8. The King's Speech (2010)\n9. Silver Linings Playbook (2012)\n10. Four Weddings and a Funeral (1994)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0008": {
+    "profile_id": "user_0008",
+    "gender": "male",
+    "age": "35-44",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Silver Linings Playbook (2012)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "The Grand Budapest Hotel (2014)",
+      "The Artist (2011)",
+      "Midnight in Paris (2011)",
+      "Her (2013)",
+      "La La Land (2016)",
+      "The Descendants (2011)",
+      "Amelie (2001)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Silver Linings Playbook (2012)\n3. Eternal Sunshine of the Spotless Mind (2004)\n4. The Grand Budapest Hotel (2014)\n5. The Artist (2011)\n6. Midnight in Paris (2011)\n7. Her (2013)\n8. La La Land (2016)\n9. The Descendants (2011)\n10. Amelie (2001)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0009": {
+    "profile_id": "user_0009",
+    "gender": "male",
+    "age": "45-54",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Amelie (2001)",
+      "The Grand Budapest Hotel (2014)",
+      "Silver Linings Playbook (2012)",
+      "The Descendants (2011)",
+      "Midnight in Paris (2011)",
+      "Nebraska (2013)",
+      "The Artist (2011)",
+      "The King's Speech (2010)",
+      "Little Miss Sunshine (2006)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Amelie (2001)\n3. The Grand Budapest Hotel (2014)\n4. Silver Linings Playbook (2012)\n5. The Descendants (2011)\n6. Midnight in Paris (2011)\n7. Nebraska (2013)\n8. The Artist (2011)\n9. The King's Speech (2010)\n10. Little Miss Sunshine (2006)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0010": {
+    "profile_id": "user_0010",
+    "gender": "male",
+    "age": "45-54",
+    "recommendations": [
+      "Am\u00e9lie (2001)",
+      "Lost in Translation (2003)",
+      "The Grand Budapest Hotel (2014)",
+      "Silver Linings Playbook (2012)",
+      "The Artist (2011)",
+      "Midnight in Paris (2011)",
+      "La La Land (2016)",
+      "The Shape of Water (2017)",
+      "Nebraska (2013)",
+      "The Descendants (2011)"
+    ],
+    "raw_response": "1. Am\u00e9lie (2001)\n2. Lost in Translation (2003)\n3. The Grand Budapest Hotel (2014)\n4. Silver Linings Playbook (2012)\n5. The Artist (2011)\n6. Midnight in Paris (2011)\n7. La La Land (2016)\n8. The Shape of Water (2017)\n9. Nebraska (2013)\n10. The Descendants (2011)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0011": {
+    "profile_id": "user_0011",
+    "gender": "male",
+    "age": "45-54",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Amelie (2001)",
+      "The Grand Budapest Hotel (2014)",
+      "Silver Linings Playbook (2012)",
+      "Shakespeare in Love (1998)",
+      "Little Miss Sunshine (2006)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "The Artist (2011)",
+      "Midnight in Paris (2011)",
+      "The Station Agent (2003)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Amelie (2001)\n3. The Grand Budapest Hotel (2014)\n4. Silver Linings Playbook (2012)\n5. Shakespeare in Love (1998)\n6. Little Miss Sunshine (2006)\n7. Eternal Sunshine of the Spotless Mind (2004)\n8. The Artist (2011)\n9. Midnight in Paris (2011)\n10. The Station Agent (2003)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0012": {
+    "profile_id": "user_0012",
+    "gender": "male",
+    "age": "55+",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "The Grand Budapest Hotel (2014)",
+      "Sense and Sensibility (1995)",
+      "The King's Speech (2010)",
+      "Midnight in Paris (2011)",
+      "Am\u00e9lie (2001)",
+      "La La Land (2016)",
+      "The Artist (2011)",
+      "Silver Linings Playbook (2012)",
+      "Manchester by the Sea (2016)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. The Grand Budapest Hotel (2014)\n3. Sense and Sensibility (1995)\n4. The King's Speech (2010)\n5. Midnight in Paris (2011)\n6. Am\u00e9lie (2001)\n7. La La Land (2016)\n8. The Artist (2011)\n9. Silver Linings Playbook (2012)\n10. Manchester by the Sea (2016)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0013": {
+    "profile_id": "user_0013",
+    "gender": "male",
+    "age": "55+",
+    "recommendations": [
+      "Amelie (2001)",
+      "Lost in Translation (2003)",
+      "A Beautiful Mind (2001)",
+      "Midnight in Paris (2011)",
+      "The Grand Budapest Hotel (2014)",
+      "Silver Linings Playbook (2012)",
+      "Shakespeare in Love (1998)",
+      "The Artist (2011)",
+      "The Descendants (2011)",
+      "The Intouchables (2011)"
+    ],
+    "raw_response": "1. Amelie (2001)\n2. Lost in Translation (2003)\n3. A Beautiful Mind (2001)\n4. Midnight in Paris (2011)\n5. The Grand Budapest Hotel (2014)\n6. Silver Linings Playbook (2012)\n7. Shakespeare in Love (1998)\n8. The Artist (2011)\n9. The Descendants (2011)\n10. The Intouchables (2011)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0014": {
+    "profile_id": "user_0014",
+    "gender": "male",
+    "age": "55+",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Groundhog Day (1993)",
+      "Cinema Paradiso (1988)",
+      "My Dinner with Andre (1981)",
+      "Am\u00e9lie (2001)",
+      "Silver Linings Playbook (2012)",
+      "The Artist (2011)",
+      "Midnight in Paris (2011)",
+      "The Grand Budapest Hotel (2014)",
+      "La La Land (2016)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Groundhog Day (1993)\n3. Cinema Paradiso (1988)\n4. My Dinner with Andre (1981)\n5. Am\u00e9lie (2001)\n6. Silver Linings Playbook (2012)\n7. The Artist (2011)\n8. Midnight in Paris (2011)\n9. The Grand Budapest Hotel (2014)\n10. La La Land (2016)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0015": {
+    "profile_id": "user_0015",
+    "gender": "female",
+    "age": "18-24",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Am\u00e9lie (2001)",
+      "Silver Linings Playbook (2012)",
+      "The Grand Budapest Hotel (2014)",
+      "La La Land (2016)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "The Shape of Water (2017)",
+      "Midnight in Paris (2011)",
+      "Her (2013)",
+      "Little Miss Sunshine (2006)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Am\u00e9lie (2001)\n3. Silver Linings Playbook (2012)\n4. The Grand Budapest Hotel (2014)\n5. La La Land (2016)\n6. Eternal Sunshine of the Spotless Mind (2004)\n7. The Shape of Water (2017)\n8. Midnight in Paris (2011)\n9. Her (2013)\n10. Little Miss Sunshine (2006)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0016": {
+    "profile_id": "user_0016",
+    "gender": "female",
+    "age": "18-24",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "Amelie (2001)",
+      "Silver Linings Playbook (2012)",
+      "La La Land (2016)",
+      "Little Miss Sunshine (2006)",
+      "Midnight in Paris (2011)",
+      "The Grand Budapest Hotel (2014)",
+      "Pride and Prejudice (2005)",
+      "Before Sunrise (1995)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Eternal Sunshine of the Spotless Mind (2004)\n3. Amelie (2001)\n4. Silver Linings Playbook (2012)\n5. La La Land (2016)\n6. Little Miss Sunshine (2006)\n7. Midnight in Paris (2011)\n8. The Grand Budapest Hotel (2014)\n9. Pride and Prejudice (2005)\n10. Before Sunrise (1995)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0017": {
+    "profile_id": "user_0017",
+    "gender": "female",
+    "age": "18-24",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "Amelie (2001)",
+      "Silver Linings Playbook (2012)",
+      "Midnight in Paris (2011)",
+      "Little Miss Sunshine (2006)",
+      "Before Sunrise (1995)",
+      "The Grand Budapest Hotel (2014)",
+      "La La Land (2016)",
+      "Juno (2007)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Eternal Sunshine of the Spotless Mind (2004)\n3. Amelie (2001)\n4. Silver Linings Playbook (2012)\n5. Midnight in Paris (2011)\n6. Little Miss Sunshine (2006)\n7. Before Sunrise (1995)\n8. The Grand Budapest Hotel (2014)\n9. La La Land (2016)\n10. Juno (2007)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0018": {
+    "profile_id": "user_0018",
+    "gender": "female",
+    "age": "25-34",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Am\u00e9lie (2001)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "The Grand Budapest Hotel (2014)",
+      "Silver Linings Playbook (2012)",
+      "La La Land (2016)",
+      "Midnight in Paris (2011)",
+      "Her (2013)",
+      "Little Miss Sunshine (2006)",
+      "The Shape of Water (2017)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Am\u00e9lie (2001)\n3. Eternal Sunshine of the Spotless Mind (2004)\n4. The Grand Budapest Hotel (2014)\n5. Silver Linings Playbook (2012)\n6. La La Land (2016)\n7. Midnight in Paris (2011)\n8. Her (2013)\n9. Little Miss Sunshine (2006)\n10. The Shape of Water (2017)",
+    "model": "gpt-3.5-turbo"
+  },
+  "user_0019": {
+    "profile_id": "user_0019",
+    "gender": "female",
+    "age": "25-34",
+    "recommendations": [
+      "Lost in Translation (2003)",
+      "Amelie (2001)",
+      "Sense and Sensibility (1995)",
+      "Silver Linings Playbook (2012)",
+      "The Grand Budapest Hotel (2014)",
+      "La La Land (2016)",
+      "The Shape of Water (2017)",
+      "Little Miss Sunshine (2006)",
+      "Eternal Sunshine of the Spotless Mind (2004)",
+      "Moonrise Kingdom (2012)"
+    ],
+    "raw_response": "1. Lost in Translation (2003)\n2. Amelie (2001)\n3. Sense and Sensibility (1995)\n4. Silver Linings Playbook (2012)\n5. The Grand Budapest Hotel (2014)\n6. La La Land (2016)\n7. The Shape of Water (2017)\n8. Little Miss Sunshine (2006)\n9. Eternal Sunshine of the Spotless Mind (2004)\n10. Moonrise Kingdom (2012)",
+    "model": "gpt-3.5-turbo"
+  }
+}

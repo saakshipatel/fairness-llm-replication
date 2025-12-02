@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "model": "gpt-3.5-turbo",
+    "num_profiles": 27,
+    "timestamp": "2025-11-30 12:45:25"
+  },
+  "baseline_metrics": {
+    "original_fairness": 0.641230683381297,
+    "mitigated_fairness": 0.641230683381297,
+    "original_bias": 0.35876931661870304,
+    "mitigated_bias": 0.35876931661870304,
+    "bias_reduction_rate": 0.0
+  },
+  "facter_results": {
+    "thresholds": {
+      "male": 0.15818448126264295,
+      "female": 0.15699629636062806
+    },
+    "final_recommendations": {
+      "user_0000": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "La La Land (2016)",
+        "The Grand Budapest Hotel (2014)",
+        "Silver Linings Playbook (2012)",
+        "Midnight in Paris (2011)",
+        "Little Miss Sunshine (2006)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Artist (2011)",
+        "Juno (2007)"
+      ],
+      "user_0001": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "Silver Linings Playbook (2012)",
+        "The Grand Budapest Hotel (2014)",
+        "La La Land (2016)",
+        "Moonlight (2016)",
+        "The Shape of Water (2017)",
+        "Lady Bird (2017)",
+        "The Big Sick (2017)"
+      ],
+      "user_0002": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "Silver Linings Playbook (2012)",
+        "Midnight in Paris (2011)",
+        "The Grand Budapest Hotel (2014)",
+        "La La Land (2016)",
+        "The Shape of Water (2017)",
+        "Juno (2007)",
+        "The Big Sick (2017)"
+      ],
+      "user_0003": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "Pride and Prejudice (2005)",
+        "The Grand Budapest Hotel (2014)",
+        "La La Land (2016)",
+        "Silver Linings Playbook (2012)",
+        "The Artist (2011)",
+        "Midnight in Paris (2011)",
+        "Her (2013)"
+      ],
+      "user_0004": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Grand Budapest Hotel (2014)",
+        "Silver Linings Playbook (2012)",
+        "The Shape of Water (2017)",
+        "Midnight in Paris (2011)",
+        "La La Land (2016)",
+        "Her (2013)",
+        "A Beautiful Mind (2001)"
+      ],
+      "user_0005": [
+        "Lost in Translation (2003)",
+        "Amelie (2001)",
+        "The Grand Budapest Hotel (2014)",
+        "Silver Linings Playbook (2012)",
+        "Midnight in Paris (2011)",
+        "The Artist (2011)",
+        "La La Land (2016)",
+        "The King's Speech (2010)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Intouchables (2011)"
+      ],
+      "user_0006": [
+        "Cinema Paradiso (1988)",
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Silver Linings Playbook (2012)",
+        "Midnight in Paris (2011)",
+        "The Grand Budapest Hotel (2014)",
+        "La La Land (2016)",
+        "The Artist (2011)",
+        "Little Miss Sunshine (2006)",
+        "The Princess Bride (1987)"
+      ],
+      "user_0007": [
+        "Lost in Translation (2003)",
+        "Amelie (2001)",
+        "The Grand Budapest Hotel (2014)",
+        "Groundhog Day (1993)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Shawshank Redemption (1994)",
+        "Life is Beautiful (1997)",
+        "Midnight in Paris (2011)",
+        "Little Miss Sunshine (2006)",
+        "Silver Linings Playbook (2012)"
+      ],
+      "user_0008": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Sense and Sensibility (1995)",
+        "The Grand Budapest Hotel (2014)",
+        "La La Land (2016)",
+        "The King's Speech (2010)",
+        "Silver Linings Playbook (2012)",
+        "The Artist (2011)",
+        "The Intouchables (2011)",
+        "Midnight in Paris (2011)"
+      ],
+      "user_0009": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Sense and Sensibility (1995)",
+        "The Green Mile (1999)",
+        "Groundhog Day (1993)",
+        "Beautiful Girls (1996)",
+        "Dead Poets Society (1989)",
+        "As Good as It Gets (1997)",
+        "The Grand Budapest Hotel (2014)",
+        "The Shawshank Redemption (1994)"
+      ],
+      "user_0010": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "The Grand Budapest Hotel (2014)",
+        "Silver Linings Playbook (2012)",
+        "Little Miss Sunshine (2006)",
+        "Midnight in Paris (2011)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Shape of Water (2017)",
+        "Juno (2007)",
+        "La La Land (2016)"
+      ],
+      "user_0011": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "The Shawshank Redemption (1994)",
+        "The Grand Budapest Hotel (2014)",
+        "Chocolat (2000)",
+        "Midnight in Paris (2011)",
+        "The Intouchables (2011)",
+        "Cinema Paradiso (1988)",
+        "Silver Linings Playbook (2012)",
+        "The Artist (2011)"
+      ],
+      "user_0012": [
+        "Cinema Paradiso (1988)",
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "The Grand Budapest Hotel (2014)",
+        "Groundhog Day (1993)",
+        "The Shawshank Redemption (1994)",
+        "Sense and Sensibility (1995)",
+        "A Beautiful Mind (2001)",
+        "The Green Mile (1999)",
+        "Eternal Sunshine of the Spotless Mind (2004)"
+      ],
+      "user_0013": [
+        "Based on the user's preferences for drama, comedy, and romance, here are 10 movie recommendations:",
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Midnight in Paris (2011)",
+        "The Grand Budapest Hotel (2014)",
+        "Silver Linings Playbook (2012)",
+        "The Intouchables (2011)",
+        "Shakespeare in Love (1998)",
+        "Sideways (2004)",
+        "About Time (2013)"
+      ],
+      "user_0014": [
+        "Amelie (2001)",
+        "Cinema Paradiso (1988)",
+        "Lost in Translation (2003)",
+        "Midnight in Paris (2011)",
+        "The Artist (2011)",
+        "The Grand Budapest Hotel (2014)",
+        "Nebraska (2013)",
+        "Silver Linings Playbook (2012)",
+        "The Descendants (2011)",
+        "The Hundred-Foot Journey (2014)"
+      ],
+      "user_0015": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Silver Linings Playbook (2012)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Grand Budapest Hotel (2014)",
+        "La La Land (2016)",
+        "The Shape of Water (2017)",
+        "Little Miss Sunshine (2006)",
+        "Juno (2007)",
+        "Midnight in Paris (2011)"
+      ],
+      "user_0016": [
+        "Shakespeare in Love (1998)",
+        "Lost in Translation (2003)",
+        "Amelie (2001)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "Moonrise Kingdom (2012)",
+        "La La Land (2016)",
+        "Silver Linings Playbook (2012)",
+        "Midnight in Paris (2011)",
+        "Pride and Prejudice (2005)",
+        "Little Miss Sunshine (2006)"
+      ],
+      "user_0017": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Sense and Sensibility (1995)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Grand Budapest Hotel (2014)",
+        "La La Land (2016)",
+        "The Shape of Water (2017)",
+        "Silver Linings Playbook (2012)",
+        "Moonrise Kingdom (2012)",
+        "The Princess Bride (1987)"
+      ],
+      "user_0018": [
+        "Amelie (2001)",
+        "Pride and Prejudice (2005)",
+        "Lost in Translation (2003)",
+        "La La Land (2016)",
+        "The Grand Budapest Hotel (2014)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "Silver Linings Playbook (2012)",
+        "Midnight in Paris (2011)",
+        "The Shape of Water (2017)",
+        "Little Miss Sunshine (2006)"
+      ],
+      "user_0019": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Shakespeare in Love (1998)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "Little Miss Sunshine (2006)",
+        "The Grand Budapest Hotel (2014)",
+        "Silver Linings Playbook (2012)",
+        "Before Sunrise (1995)",
+        "Midnight in Paris (2011)",
+        "La La Land (2016)"
+      ],
+      "user_0020": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "Midnight in Paris (2011)",
+        "Silver Linings Playbook (2012)",
+        "Little Miss Sunshine (2006)",
+        "La La Land (2016)",
+        "The Artist (2011)",
+        "The Grand Budapest Hotel (2014)",
+        "Moonrise Kingdom (2012)"
+      ],
+      "user_0021": [
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "Lost in Translation (2003)",
+        "Amelie (2001)",
+        "Sideways (2004)",
+        "Sense and Sensibility (1995)",
+        "The Grand Budapest Hotel (2014)",
+        "Silver Linings Playbook (2012)",
+        "The Shape of Water (2017)",
+        "La La Land (2016)",
+        "The Notebook (2004)"
+      ],
+      "user_0022": [
+        "Lost in Translation (2003)",
+        "Amelie (2001)",
+        "Sense and Sensibility (1995)",
+        "The Grand Budapest Hotel (2014)",
+        "Little Miss Sunshine (2006)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Princess Bride (1987)",
+        "Silver Linings Playbook (2012)",
+        "Juno (2007)",
+        "Shakespeare in Love (1998)"
+      ],
+      "user_0023": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Eternal Sunshine of the Spotless Mind (2004)",
+        "The Grand Budapest Hotel (2014)",
+        "Silver Linings Playbook (2012)",
+        "La La Land (2016)",
+        "The Shape of Water (2017)",
+        "The Artist (2011)",
+        "Midnight in Paris (2011)",
+        "Moonlight (2016)"
+      ],
+      "user_0024": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Sense and Sensibility (1995)",
+        "The Artist (2011)",
+        "Little Miss Sunshine (2006)",
+        "Pride and Prejudice (2005)",
+        "The Grand Budapest Hotel (2014)",
+        "Shakespeare in Love (1998)",
+        "The King's Speech (2010)",
+        "La La Land (2016)"
+      ],
+      "user_0025": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Sense and Sensibility (1995)",
+        "Groundhog Day (1993)",
+        "The Grand Budapest Hotel (2014)",
+        "When Harry Met Sally (1989)",
+        "The Artist (2011)",
+        "Pride and Prejudice (2005)",
+        "Little Miss Sunshine (2006)",
+        "Jerry Maguire (1996)"
+      ],
+      "user_0026": [
+        "Amelie (2001)",
+        "Lost in Translation (2003)",
+        "Sense and Sensibility (1995)",
+        "The Grand Budapest Hotel (2014)",
+        "Shakespeare in Love (1998)",
+        "Sideways (2004)",
+        "Little Miss Sunshine (2006)",
+        "Juno (2007)",
+        "Silver Linings Playbook (2012)",
+        "Midnight in Paris (2011)"
+      ]
+    }
+  },
+  "bias_metrics": {
+    "original_fairness": 0.641230683381297,
+    "mitigated_fairness": 0.6533543808551441,
+    "original_bias": 0.35876931661870304,
+    "mitigated_bias": 0.3466456191448559,
+    "bias_reduction_rate": 3.3792459143690037
+  },
+  "quality_metrics": {
+    "average_overlap": 0.4633839290702036,
+    "quality_preservation_pct": 46.338392907020356,
+    "num_comparisons": 27
+  }
+}
