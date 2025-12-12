@@ -2,7 +2,7 @@
 Phase 2: Cross-Model Evaluation
 Replicates Paper 2: "Do Large Language Models Rank Fairly?"
 
-This phase compares fairness across multiple LLMs and evaluation methodologies.
+In this phase we are comparing fairness across multiple LLMs and evaluation methodolgies.
 """
 
 import sys
@@ -23,17 +23,10 @@ import utils
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# =============================================================================
 # DATA LOADING
-# =============================================================================
-
 def create_synthetic_ranking_data(num_items: int = 20) -> List[Dict]:
     """
-    Create synthetic ranking data for demonstration
-    In a real implementation, this would load TREC Fair Ranking dataset
-    
-    Returns:
-        List of items with attributes
+    Create synthetic ranking data for demo
     """
     items = []
     
@@ -49,20 +42,10 @@ def create_synthetic_ranking_data(num_items: int = 20) -> List[Dict]:
     
     return items
 
-# =============================================================================
 # LISTWISE EVALUATION
-# =============================================================================
-
 def create_listwise_prompt(items: List[Dict], query: str = None) -> str:
     """
     Create prompt for listwise ranking
-    
-    Args:
-        items: List of items to rank
-        query: Optional query context
-        
-    Returns:
-        Formatted prompt
     """
     if query is None:
         query = "most relevant and high-quality documents"
@@ -89,16 +72,7 @@ def listwise_evaluation(items: List[Dict],
                        client: OpenAI,
                        query: str = None) -> List[str]:
     """
-    Perform listwise evaluation: rank all items at once
-    
-    Args:
-        items: Items to rank
-        model_name: LLM model to use
-        client: OpenAI client
-        query: Query context
-        
-    Returns:
-        Ranked list of item IDs
+    Perform listwise evaluation: we rank all items at once
     """
     prompt = create_listwise_prompt(items, query)
     
@@ -134,10 +108,7 @@ def listwise_evaluation(items: List[Dict],
         # Return default ranking
         return [item['id'] for item in items]
 
-# =============================================================================
 # PAIRWISE EVALUATION
-# =============================================================================
-
 def create_pairwise_prompt(item_a: Dict, item_b: Dict, query: str = None) -> str:
     """Create prompt for pairwise comparison"""
     if query is None:
@@ -164,9 +135,6 @@ def pairwise_comparison(item_a: Dict,
                        query: str = None) -> str:
     """
     Compare two items pairwise
-    
-    Returns:
-        'A', 'B', or 'tie'
     """
     prompt = create_pairwise_prompt(item_a, item_b, query)
     
@@ -201,9 +169,6 @@ def pairwise_evaluation(items: List[Dict],
                        query: str = None) -> Tuple[List[str], List[Dict]]:
     """
     Perform pairwise evaluation and build ranking
-    
-    Returns:
-        (ranked_item_ids, comparison_results)
     """
     # Generate random pairs
     comparisons = []
@@ -253,9 +218,6 @@ def calculate_exposure_ratio(ranked_items: List[str],
                             protected_attr: str = 'protected_attribute') -> Tuple[float, Dict]:
     """
     Calculate exposure ratio across protected groups
-    
-    Returns:
-        (exposure_ratio, exposure_by_group)
     """
     # Create item lookup
     item_dict = {item['id']: item for item in items_data}
@@ -293,10 +255,7 @@ def calculate_exposure_ratio(ranked_items: List[str],
 
 def calculate_pairwise_preference_ratio(comparisons: List[Dict]) -> Dict[str, float]:
     """
-    Calculate preference ratio from pairwise comparisons
-    
-    Returns:
-        Dict of win rates by group
+    Calculate preference ratio from  pairwise comparisons
     """
     # Count wins for each protected group
     group_wins = defaultdict(int)
@@ -324,9 +283,6 @@ def calculate_ndcg_per_group(ranked_items: List[str],
                             k: int = 10) -> Dict[str, float]:
     """
     Calculate NDCG separately for each protected group
-    
-    Returns:
-        Dict of NDCG scores by group
     """
     # Create item lookup
     item_dict = {item['id']: item for item in items_data}
@@ -359,25 +315,13 @@ def calculate_ndcg_per_group(ranked_items: List[str],
     
     return ndcg_scores
 
-# =============================================================================
 # MAIN EXECUTION
-# =============================================================================
-
 def run_phase2(models: List[str] = None,
               num_items: int = 20,
               num_pairwise_comparisons: int = 30,
               save_results: bool = True) -> Dict:
     """
     Run complete Phase 2: Cross-Model Evaluation
-    
-    Args:
-        models: List of model names to test
-        num_items: Number of items to rank
-        num_pairwise_comparisons: Number of pairwise comparisons to make
-        save_results: Whether to save results
-        
-    Returns:
-        Dict with all results
     """
     print("=" * 80)
     print("PHASE 2: CROSS-MODEL EVALUATION")
@@ -483,7 +427,6 @@ def run_phase2(models: List[str] = None,
         utils.save_results('phase2_results.json', results,
                          results_dir=os.path.join(config.RESULTS_DIR, 'phase2'))
     
-    # Print summary
     print_phase2_summary(results)
     
     return results
@@ -534,7 +477,7 @@ def print_phase2_summary(results: Dict):
     print(f"\nModels tested: {', '.join(results['metadata']['models'])}")
     print(f"Items ranked: {results['metadata']['num_items']}")
     
-    print("\nFairness Scores by Model (Exposure Ratio, 0-1, higher is better):")
+    print("\nFairness Score by Model (Exposure Ratio, 0-1, higher is better):")
     print("-" * 80)
     
     for model_name, model_results in results['model_results'].items():
@@ -561,18 +504,15 @@ def print_phase2_summary(results: Dict):
     ])
     
     if avg_fairness < 0.7:
-        print("  ⚠️  Significant fairness issues detected across models")
+        print("Significant fairness issues detected across models")
     elif avg_fairness < 0.85:
-        print("  ⚠️  Moderate fairness issues detected")
+        print("Moderate fairness issues detected")
     else:
-        print("  ✓  Generally fair rankings across models")
+        print("Generally fair rankings across models")
     
     print("\n" + "=" * 80)
 
-# =============================================================================
 # ENTRY POINT
-# =============================================================================
-
 if __name__ == "__main__":
     import argparse
     

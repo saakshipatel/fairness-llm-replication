@@ -1,17 +1,16 @@
 """
-Main Runner Script for Fairness in LLM Replication Study
 
-This script runs all three phases of the replication study:
+The script runs all three phases of our replication study:
 - Phase 1: Bias Detection in ChatGPT
 - Phase 2: Cross-Model Evaluation  
-- Phase 3: FACTER Mitigation
+- Phase 3: FACTER Mitigation i.e. postprocessing
 
 Usage:
-    python main.py --all                  # Run all phases
-    python main.py --phase 1              # Run only Phase 1
-    python main.py --phase 2              # Run only Phase 2
-    python main.py --phase 3              # Run only Phase 3
-    python main.py --quick                # Quick demo mode
+    python src/main.py --all                  # Run all phases
+    python src/main.py --phase 1              # Run only Phase 1
+    python src/main.py --phase 2              # Run only Phase 2
+    python src/main.py --phase 3              # Run only Phase 3
+    python src/main.py --quick                # Quick demo mode
 """
 
 import sys
@@ -28,18 +27,15 @@ from phase2_cross_model_eval import run_phase2
 from phase3_facter_mitigation import run_phase3
 
 def print_banner():
-    """Print project banner"""
     banner = """
-╔════════════════════════════════════════════════════════════════════════════╗
-║                                                                            ║
-║           FAIRNESS IN LLM-BASED RANKING AND RECOMMENDATION SYSTEMS         ║
-║                          A Replication Study                               ║
-║                                                                            ║
-║  Phase 1: Bias Detection in ChatGPT                                       ║
-║  Phase 2: Cross-Model Evaluation                                          ║
-║  Phase 3: FACTER Bias Mitigation                                          ║
-║                                                                            ║
-╚════════════════════════════════════════════════════════════════════════════╝
+                                                                        
+FAIRNESS IN LLM-BASED RANKING AND RECOMMENDATION SYSTEMS         
+A Replication Study                               
+                                                                            
+  Phase 1: Bias Detection in ChatGPT                                       
+  Phase 2: Cross-Model Evaluation                                          
+  Phase 3: FACTER Bias Mitigation                                          
+                                                                            
     """
     print(banner)
 

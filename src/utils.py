@@ -1,8 +1,3 @@
-"""
-Utility functions for Fairness in LLM Replication Study
-Shared helper functions used across all phases
-"""
-
 import json
 import pickle
 import os
@@ -19,18 +14,10 @@ import pandas as pd
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# =============================================================================
 # FILE I/O OPERATIONS
-# =============================================================================
-
 def save_results(filename: str, data: Any, results_dir: str = '../results'):
     """
     Save results to JSON file
-    
-    Args:
-        filename: Name of file to save
-        data: Data to save (will be JSON serialized)
-        results_dir: Directory to save results in
     """
     filepath = os.path.join(results_dir, filename)
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
@@ -46,13 +33,6 @@ def save_results(filename: str, data: Any, results_dir: str = '../results'):
 def load_results(filename: str, results_dir: str = '../results') -> Any:
     """
     Load results from JSON file
-    
-    Args:
-        filename: Name of file to load
-        results_dir: Directory to load results from
-        
-    Returns:
-        Loaded data
     """
     filepath = os.path.join(results_dir, filename)
     
@@ -86,20 +66,10 @@ def load_pickle(filename: str, results_dir: str = '../results') -> Any:
     logger.info(f"Pickle loaded from {filepath}")
     return data
 
-# =============================================================================
 # STATISTICAL FUNCTIONS
-# =============================================================================
-
 def calculate_kl_divergence(p: Dict[str, float], q: Dict[str, float]) -> float:
     """
     Calculate KL divergence between two probability distributions
-    
-    Args:
-        p: First distribution (dict of {category: probability})
-        q: Second distribution (dict of {category: probability})
-        
-    Returns:
-        KL divergence value
     """
     # Get all unique keys
     all_keys = set(list(p.keys()) + list(q.keys()))
@@ -119,13 +89,6 @@ def calculate_kl_divergence(p: Dict[str, float], q: Dict[str, float]) -> float:
 def calculate_js_divergence(p: Dict[str, float], q: Dict[str, float]) -> float:
     """
     Calculate Jensen-Shannon divergence (symmetric version of KL divergence)
-    
-    Args:
-        p: First distribution
-        q: Second distribution
-        
-    Returns:
-        JS divergence value (0 = identical, 1 = completely different)
     """
     all_keys = set(list(p.keys()) + list(q.keys()))
     
@@ -146,21 +109,10 @@ def calculate_percentile(values: List[float], percentile: int) -> float:
     """Calculate percentile of values"""
     return np.percentile(values, percentile)
 
-# =============================================================================
 # RECOMMENDATION QUALITY METRICS
-# =============================================================================
-
 def calculate_ndcg(rankings: List[str], ground_truth: Dict[str, float], k: int = 10) -> float:
     """
     Calculate Normalized Discounted Cumulative Gain (NDCG@k)
-    
-    Args:
-        rankings: Ordered list of recommended items
-        ground_truth: Dict of {item_id: relevance_score}
-        k: Number of top items to consider
-        
-    Returns:
-        NDCG score (0-1, higher is better)
     """
     # Calculate DCG
     dcg = 0.0
@@ -184,14 +136,6 @@ def calculate_precision_at_k(recommendations: List[str],
                             k: int = 10) -> float:
     """
     Calculate Precision@K
-    
-    Args:
-        recommendations: List of recommended items
-        relevant_items: Set of relevant items
-        k: Number of top items to consider
-        
-    Returns:
-        Precision score (0-1)
     """
     top_k = set(recommendations[:k])
     relevant_in_top_k = len(top_k.intersection(relevant_items))
@@ -202,14 +146,6 @@ def calculate_recall_at_k(recommendations: List[str],
                           k: int = 10) -> float:
     """
     Calculate Recall@K
-    
-    Args:
-        recommendations: List of recommended items
-        relevant_items: Set of relevant items
-        k: Number of top items to consider
-        
-    Returns:
-        Recall score (0-1)
     """
     top_k = set(recommendations[:k])
     relevant_in_top_k = len(top_k.intersection(relevant_items))
@@ -224,14 +160,7 @@ def calculate_f1_score(precision: float, recall: float) -> float:
 def calculate_catalog_coverage(all_recommendations: List[List[str]], 
                               catalog_size: int) -> float:
     """
-    Calculate catalog coverage (what percentage of items are ever recommended)
-    
-    Args:
-        all_recommendations: List of recommendation lists
-        catalog_size: Total number of items in catalog
-        
-    Returns:
-        Coverage percentage (0-100)
+    Calculate catalog coverage
     """
     unique_items = set()
     for recs in all_recommendations:
@@ -239,22 +168,11 @@ def calculate_catalog_coverage(all_recommendations: List[List[str]],
     
     return len(unique_items) / catalog_size * 100 if catalog_size > 0 else 0.0
 
-# =============================================================================
 # FAIRNESS METRICS
-# =============================================================================
-
 def calculate_demographic_parity(recommendations_by_group: Dict[str, List[List[str]]], 
                                 genre_mapping: Optional[Dict[str, List[str]]] = None) -> Tuple[float, Dict]:
     """
     Calculate Demographic Parity
-    Measures if different demographic groups receive similar distributions
-    
-    Args:
-        recommendations_by_group: Dict of {group: list_of_recommendations}
-        genre_mapping: Optional dict mapping items to genres
-        
-    Returns:
-        (parity_score, detailed_info)
     """
     # Count item/genre distributions for each group
     distributions = {}
@@ -300,14 +218,6 @@ def calculate_individual_fairness(profile_pairs: List[Tuple[str, str]],
                                   recommendations: Dict[str, List[str]]) -> Tuple[float, List[float]]:
     """
     Calculate Individual Fairness
-    Similar users should get similar recommendations
-    
-    Args:
-        profile_pairs: List of (profile_id1, profile_id2) tuples that should be similar
-        recommendations: Dict of {profile_id: recommendations_list}
-        
-    Returns:
-        (fairness_score, similarity_scores)
     """
     similarity_scores = []
     
@@ -337,14 +247,6 @@ def calculate_equal_opportunity(recommendations_by_group: Dict[str, List[List[st
                                 relevant_items: set) -> Tuple[float, Dict[str, float]]:
     """
     Calculate Equal Opportunity
-    Qualified items should have equal chance across groups
-    
-    Args:
-        recommendations_by_group: Dict of {group: list_of_recommendations}
-        relevant_items: Set of items considered relevant/qualified
-        
-    Returns:
-        (fairness_score, opportunity_by_group)
     """
     opportunity_scores = {}
     
@@ -376,14 +278,6 @@ def calculate_exposure_ratio(rankings: List[Tuple[str, str]],
                             protected_attribute: str = 'gender') -> Tuple[float, Dict[str, float]]:
     """
     Calculate Exposure Ratio
-    Measures visibility of different groups in rankings
-    
-    Args:
-        rankings: List of (item_id, group) tuples in ranked order
-        protected_attribute: Name of protected attribute
-        
-    Returns:
-        (exposure_ratio, exposure_by_group)
     """
     # Calculate exposure for each position (decreasing with rank)
     exposures_by_group = defaultdict(list)
@@ -410,23 +304,12 @@ def calculate_exposure_ratio(rankings: List[Tuple[str, str]],
     
     return exposure_ratio, avg_exposure
 
-# =============================================================================
 # DATA ORGANIZATION HELPERS
-# =============================================================================
-
 def organize_by_attribute(recommendations: Dict[str, Any], 
                           profiles: List[Dict], 
                           attribute: str) -> Dict[str, List]:
     """
     Group recommendations by demographic attribute
-    
-    Args:
-        recommendations: Dict of recommendations
-        profiles: List of user profiles
-        attribute: Attribute to group by (e.g., 'gender')
-        
-    Returns:
-        Dict of {attribute_value: list_of_recommendations}
     """
     grouped = defaultdict(list)
     
@@ -445,13 +328,6 @@ def create_profile_pairs(profiles: List[Dict],
                         differing_attribute: Optional[str] = None) -> List[Tuple[str, str]]:
     """
     Create pairs of profiles that are identical except for one attribute
-    
-    Args:
-        profiles: List of user profiles
-        differing_attribute: If specified, only create pairs differing in this attribute
-        
-    Returns:
-        List of (profile_id1, profile_id2) tuples
     """
     pairs = []
     
@@ -470,19 +346,10 @@ def create_profile_pairs(profiles: List[Dict],
     
     return pairs
 
-# =============================================================================
 # TEXT PROCESSING HELPERS
-# =============================================================================
-
 def parse_recommendation_list(text: str) -> List[str]:
     """
     Parse LLM response to extract list of recommendations
-    
-    Args:
-        text: Raw text from LLM
-        
-    Returns:
-        List of recommended item names
     """
     recommendations = []
     lines = text.strip().split('\n')
@@ -514,10 +381,8 @@ def extract_movie_title(text: str) -> str:
     text = re.sub(r'\s*\(\d{4}\)', '', text)
     return text.strip()
 
-# =============================================================================
-# RATE LIMITING AND API HELPERS
-# =============================================================================
 
+# RATE LIMITING AND API HELPERS
 class RateLimiter:
     """Simple rate limiter for API calls"""
     
@@ -542,10 +407,7 @@ class RateLimiter:
         # Record this call
         self.calls.append(time.time())
 
-# =============================================================================
 # PROGRESS TRACKING
-# =============================================================================
-
 def print_progress(current: int, total: int, prefix: str = ''):
     """Print progress bar"""
     percent = current / total * 100
@@ -556,10 +418,7 @@ def print_progress(current: int, total: int, prefix: str = ''):
     if current == total:
         print()  # New line when complete
 
-# =============================================================================
 # MAIN
-# =============================================================================
-
 if __name__ == "__main__":
     # Test some utility functions
     print("Testing utility functions...")

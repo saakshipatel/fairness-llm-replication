@@ -241,13 +241,12 @@ print(f"Our result:            {reduction:.1f}%")
 print(f"Gap:                   {95 - reduction:.1f} percentage points")
 
 if reduction >= 50:
-    print(f"\n✓ GOOD - Achieved {reduction:.1f}% reduction (moderate success)")
+    print(f"\nGOOD - Achieved {reduction:.1f}% reduction (moderate success)")
 elif reduction >= 30:
-    print(f"\n~ MODERATE - Achieved {reduction:.1f}% reduction")
+    print(f"\nMODERATE - Achieved {reduction:.1f}% reduction")
 else:
-    print(f"\n✗ LOW - Only {reduction:.1f}% reduction achieved")
+    print(f"\nLOW - Only {reduction:.1f}% reduction achieved")
 
 print("\nConclusion: Results demonstrate reproducibility challenges in")
 print("fairness research. Simple implementation achieves modest gains,")
 print("suggesting paper's 95% may require extensive tuning not documented.")
-print("=" * 80)

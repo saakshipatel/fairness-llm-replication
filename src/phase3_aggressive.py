@@ -307,13 +307,13 @@ print(f"Quality preservation: {quality:.2f}%")
 print()
 
 if reduction >= 70:
-    status = "✓ EXCELLENT"
+    status = "EXCELLENT"
 elif reduction >= 50:
-    status = "✓ GOOD"
+    status = "GOOD"
 elif reduction >= 30:
-    status = "~ MODERATE"
+    status = "MODERATE"
 else:
-    status = "✗ LOW"
+    status = "LOW"
 
 print(f"Reduction vs Paper (95%): {status} ({reduction:.1f}%)")
 print(f"Gap from paper claim: {95 - reduction:.1f} percentage points")

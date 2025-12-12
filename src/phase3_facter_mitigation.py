@@ -1,9 +1,6 @@
 """
 Phase 3: FACTER Mitigation
-Replicates Paper 3: "FACTER - Fairness-Aware Conformal Thresholding 
-                     and Prompt Engineering"
-
-This phase applies bias mitigation techniques and measures effectiveness.
+Replicates Paper 3: "FACTER - Fairness-Aware Conformal Thresholding and Prompt Engineering"
 """
 
 import sys
@@ -24,21 +21,11 @@ import utils
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# =============================================================================
 # FAIRNESS-AWARE PROMPTING
-# =============================================================================
-
 def apply_fairness_aware_prompting(base_prompt: str, 
                                    fairness_strategy: str = 'demographic_parity') -> str:
     """
     Enhance prompt with fairness instructions
-    
-    Args:
-        base_prompt: Original prompt
-        fairness_strategy: Type of fairness to enforce
-        
-    Returns:
-        Enhanced prompt with fairness instructions
     """
     fairness_instructions = {
         'demographic_parity': """
@@ -82,9 +69,6 @@ def get_fair_recommendations(profile: Dict,
                             num_recommendations: int = 10) -> Dict:
     """
     Get recommendations using fairness-aware prompting
-    
-    Returns:
-        Dict with recommendations and metadata
     """
     # Import from phase1 to avoid duplication
     from phase1_bias_detection import create_recommendation_prompt
@@ -121,23 +105,12 @@ def get_fair_recommendations(profile: Dict,
             'error': str(e)
         }
 
-# =============================================================================
 # CONFORMAL PREDICTION
-# =============================================================================
-
 def generate_calibration_data(profiles: List[Dict],
                              recommendations: Dict[str, Dict],
                              ground_truth_ratings: Optional[Dict] = None) -> pd.DataFrame:
     """
     Generate calibration data for conformal prediction
-    
-    Args:
-        profiles: List of user profiles
-        recommendations: Recommendations for each profile
-        ground_truth_ratings: Optional ground truth ratings
-        
-    Returns:
-        DataFrame with calibration data
     """
     calibration_records = []
     
@@ -180,13 +153,6 @@ def calculate_conformal_thresholds(calibration_data: pd.DataFrame,
                                    alpha: float = 0.1) -> Dict[str, float]:
     """
     Calculate group-specific thresholds using conformal prediction
-    
-    Args:
-        calibration_data: Calibration dataset
-        alpha: Significance level (e.g., 0.1 for 90% confidence)
-        
-    Returns:
-        Dict of {group: threshold}
     """
     thresholds = {}
     
@@ -220,14 +186,6 @@ def apply_conformal_filtering(recommendations: Dict[str, Dict],
                               thresholds: Dict[str, float]) -> Dict[str, List[str]]:
     """
     Filter recommendations using group-specific conformal thresholds
-    
-    Args:
-        recommendations: Original recommendations
-        profiles: User profiles
-        thresholds: Group-specific thresholds
-        
-    Returns:
-        Filtered recommendations
     """
     # Create profile lookup
     profile_dict = {p['id']: p for p in profiles}
@@ -263,25 +221,13 @@ def apply_conformal_filtering(recommendations: Dict[str, Dict],
     
     return filtered_recs
 
-# =============================================================================
 # COMPLETE FACTER PIPELINE
-# =============================================================================
-
 def apply_facter(biased_recommendations: Dict,
                 profiles: List[Dict],
                 client: OpenAI,
                 model_name: str = 'gpt-3.5-turbo') -> Dict:
     """
     Apply complete FACTER framework
-    
-    Args:
-        biased_recommendations: Original biased recommendations
-        profiles: User profiles
-        client: OpenAI client
-        model_name: Model to use
-        
-    Returns:
-        Dict with mitigated recommendations and metrics
     """
     logger.info("Applying FACTER framework...")
     
@@ -330,18 +276,12 @@ def apply_facter(biased_recommendations: Dict,
         'final_recommendations': final_recommendations
     }
 
-# =============================================================================
 # BIAS MEASUREMENT
-# =============================================================================
-
 def measure_bias_reduction(original_recs: Dict,
                           mitigated_recs: Dict,
                           profiles: List[Dict]) -> Dict:
     """
     Measure how much bias was reduced
-    
-    Returns:
-        Dict with bias metrics before and after
     """
     # Organize recommendations by gender
     def organize_recs(recs_dict):
@@ -394,9 +334,6 @@ def measure_quality_preservation(original_recs: Dict,
                                 mitigated_recs: Dict) -> Dict:
     """
     Measure how well recommendation quality was preserved
-    
-    Returns:
-        Dict with quality metrics
     """
     # Calculate overlap between original and mitigated recommendations
     overlaps = []
@@ -438,25 +375,13 @@ def measure_quality_preservation(original_recs: Dict,
         'num_comparisons': len(overlaps)
     }
 
-# =============================================================================
 # MAIN EXECUTION
-# =============================================================================
-
 def run_phase3(phase1_results: Optional[Dict] = None,
               model_name: str = None,
               num_profiles: int = 3,
               save_results: bool = True) -> Dict:
     """
     Run complete Phase 3: FACTER Mitigation
-    
-    Args:
-        phase1_results: Results from Phase 1 (or will load from file)
-        model_name: Model to use
-        num_profiles: Number of profiles to test
-        save_results: Whether to save results
-        
-    Returns:
-        Dict with all results
     """
     print("=" * 80)
     print("PHASE 3: FACTER BIAS MITIGATION")
@@ -503,7 +428,7 @@ def run_phase3(phase1_results: Optional[Dict] = None,
     print(f"  Baseline bias level: {baseline_metrics['original_bias']:.4f}")
     
     # Apply FACTER
-    print(f"[4/6] Applying FACTER framework...")
+    print(f"[4/6] Applying FACTER framework..")
     print("  This involves re-generating recommendations with fairness prompts...")
     print("  This may take several minutes...")
     
@@ -605,10 +530,7 @@ def print_phase3_summary(results: Dict):
     
     print("\n" + "=" * 80)
 
-# =============================================================================
 # ENTRY POINT
-# =============================================================================
-
 if __name__ == "__main__":
     import argparse
     
